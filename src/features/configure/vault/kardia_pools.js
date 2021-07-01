@@ -13,7 +13,7 @@ export const kardiaPools = [
       pricePerFullShare: 1,
       tvl: 0,
       oracle: 'tokens',
-      oracleId: 'wex-beco-kai',
+      oracleId: 'kaidex-beco-kai',
       oraclePrice: 0,
       depositsPaused: false,
       status: 'active',
