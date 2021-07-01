@@ -1,6 +1,6 @@
 export const kardiaPools = [
     {
-      id: 'beco-kai',
+      id: 'kaidex-beco-kai',
       logo: 'kardiachain/kai-beco.png',
       name: 'BECO-KAI KLP',
       token: 'BECO-KAI KLP',
@@ -12,7 +12,7 @@ export const kardiaPools = [
       earnContractAddress: '0xF2144D3a3d2A27a8dBDbF643C660857f8d789bd9',
       pricePerFullShare: 1,
       tvl: 0,
-      oracle: 'tokens',
+      oracle: 'lps',
       oracleId: 'kaidex-beco-kai',
       oraclePrice: 0,
       depositsPaused: false,
