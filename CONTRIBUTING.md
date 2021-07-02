@@ -41,9 +41,9 @@ git push origin fix/some-bug-#123
 
 ## All set!
 
-If you have any questions, feel free to post them to [github.com/beefyfinance/beefy-app/issues](https://github.com/beefyfinance/beefy-app/issues).
+If you have any questions, feel free to post them to [github.com/sleepearn/sleepearn-app/issues](https://github.com/sleepearn/sleepearn-app/issues).
 
-Finally, if you're looking to collaborate and want to find easy tasks to start, look at the issues we marked as ["Good first issue"](https://github.com/beefyfinance/beefy-app/issues?q=label%3A%22good+first+issue%22).
+Finally, if you're looking to collaborate and want to find easy tasks to start, look at the issues we marked as ["Good first issue"](https://github.com/sleepearn/sleepearn-app/issues?q=label%3A%22good+first+issue%22).
 
 ## Contributor rewards 
 
