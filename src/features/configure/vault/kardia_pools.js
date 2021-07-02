@@ -24,5 +24,4 @@ export const kardiaPools = [
       buyTokenUrl: 'https://kaidex.io/exchange/0x1eBbF8080149FF07381AFd148bA0AF007f78cD3c',
       addLiquidityUrl: 'https://kaidex.io/portfolio/add/0x1eBbF8080149FF07381AFd148bA0AF007f78cD3c',
     }
-  ];
 ];
