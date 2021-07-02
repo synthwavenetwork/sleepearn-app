@@ -58,8 +58,8 @@ When deciding how much time to give the community to deliverate, it's important 
 Unless there's a particular reason, the starting date should be pretty close to when you're creating the proposal. There's no need to wait much before the voting begins.
 
 ### 2. Engage the community
-You should go to our [Discord](https://discord.gg/yq8wfHd) and engage the community on why the proposal is important. 
-The #development channel is a good place to get the attention of other beefy devs. If you can post in #citadel, that's a great place to get the atention influential members of Beefy as well.
+You should go to our [telegram](https://t.me/sleepearn) and engage the community on why the proposal is important. 
+The #development channel is a good place to get the attention of other sleepearn devs. If you can post in #citadel, that's a great place to get the atention influential members of Sleepearn as well.
 
 ### 3. Outcome
 If the proposal passed, you'll be contacted by a member of the team, or feel free to PM anyone with the team tag on discord to move forwards. 
