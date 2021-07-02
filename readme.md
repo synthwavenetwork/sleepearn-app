@@ -1,15 +1,15 @@
-# Sleepearn Finance (\$BIFI)
+# Sleepearn Finance (\$SEN)
 
 ## Overview
 
-Official frontend repo of [sleepearn.finance](https://app.sleepearn.finance). The first KardiaChain yield optimizer.
+Official frontend repo of [sleepearn.finance](https://sleepearn.finance). The first KardiaChain yield optimizer.
 
 ## Env
 
 Required env vars:
 
 ```
-REACT_APP_NETWORK_ID = 56 // Network ID of BSC
+REACT_APP_NETWORK_ID = 0 // Network ID of Kai
 ```
 
 ## To Run
