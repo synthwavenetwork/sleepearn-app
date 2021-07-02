@@ -1,4 +1,4 @@
-Contributing to the Beefy App
+Contributing to the SleepEarn App
 =======
 
 We really appreciate and value contributions to the SleepEarn.Finance repositories. Please take 5' to review the items listed below to make sure that your contributions are merged as soon as possible.
@@ -12,12 +12,12 @@ As a contributor, you are expected to fork this repository, work on your own for
 1) Make sure your fork is up to date with the main repository:
 
 ```
-cd beefy-app
-git remote add upstream https://github.com/beefyfinance/beefy-app.git
+cd sleepearn-app
+git remote add upstream https://github.com/sleepearn/sleepearn-app.git
 git fetch upstream
 git pull --rebase upstream master
 ```
-NOTE: The directory `beefy-app` represents your fork's local copy.
+NOTE: The directory `sleepearn-app` represents your fork's local copy.
 
 2) Branch out from `master` into `fix/some-bug-#123`:
 (Postfixing #123 will associate your PR with the issue #123 and make everyone's life easier =D)
@@ -33,7 +33,7 @@ git commit "Fix some bug #123"
 git push origin fix/some-bug-#123
 ```
 
-4) Go to [github.com/beefyfinance/beefy-app](https://github.com/beefyfinance/beefy-app) in your web browser and issue a new pull request.
+4) Go to [github.com/sleepearn/sleepearn-app](https://github.com/sleepearn/sleepearn-app) in your web browser and issue a new pull request.
 
 5) Maintainers will review your code and possibly ask for changes before your code is pulled in to the main repository. We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of Beefy's App.
 
@@ -47,10 +47,10 @@ Finally, if you're looking to collaborate and want to find easy tasks to start, 
 
 ## Contributor rewards 
 
-Beefy wants to be a self-sustainable community. A portion of the fees that come from running the vaults at [SleepEarn.Finance](https://app.sleepearn.finance) goes into a community managed treasury. The treasury is used to pay for marketing, community managers, developers, etc. We are learning together how to do this in a fair and effective way. When it comes to devs there are a few options: 
+Sleepearn wants to be a self-sustainable community. A portion of the fees that come from running the vaults at [SleepEarn.Finance](https://sleepearn.finance) goes into a community managed treasury. The treasury is used to pay for marketing, community managers, developers, etc. We are learning together how to do this in a fair and effective way. When it comes to devs there are a few options: 
 
 1. There are some issues that will have a "Treasury Bounty" tag and a dollar amount in the issue title. This means that the issue carries a reward to the dev that closes it. 
 2. You can propose a bounty or budget to get something done by following our [proposal guidelines](PROPOSAL_GUIDELINES.md)
-3. We are tracking all contributions using [Sourcecred](https://sourcecred.io/). This is a project designed specifically to track community contributions. We have [our instance](https://SleepEarn.Finance/beefy-cred/#/explorer) and track GitHub contributions. A percentage of the treasury funds might be used every month to reward developers based on that distribution. This initiative is just getting started.
+3. We are tracking all contributions using [Sourcecred](https://sourcecred.io/). This is a project designed specifically to track community contributions. We have [our instance](https://SleepEarn.Finance/sleepearn-cred/#/explorer) and track GitHub contributions. A percentage of the treasury funds might be used every month to reward developers based on that distribution. This initiative is just getting started.
 
 Thanks for your time and code!
