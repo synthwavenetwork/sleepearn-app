@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './styles';
 
@@ -27,7 +27,7 @@ const VisiblePools = ({
   fetchVaultsDataDone,
 }) => {
   const classes = useStyles();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const { filteredPools } = useFilteredPools(pools, tokens);
   const { poolsByPlatform } = usePoolsByPlatform(filteredPools);
@@ -91,7 +91,8 @@ const VisiblePools = ({
           ))}
         </InfiniteScroll>
       </div>
-      {!sortedPools.length && <h3 className={classes.subtitle}>{t('No-Results')}</h3>}
+      {/* {!sortedPools.length && <h3 className={classes.subtitle}>{t('No-Results')}</h3>} */}
+      {!sortedPools.length && <h3 className={classes.subtitle}>Stay turn, vaults will open soon ...</h3>}
     </>
   );
 };
