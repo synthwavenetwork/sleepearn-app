@@ -92,7 +92,7 @@ const VisiblePools = ({
         </InfiniteScroll>
       </div>
       {/* {!sortedPools.length && <h3 className={classes.subtitle}>{t('No-Results')}</h3>} */}
-      {!sortedPools.length && <h3 className={classes.subtitle}>Stay turn, vaults will open soon ...</h3>}
+      {!sortedPools.length && <h3 className={classes.subtitle}>Stay tuned, vaults will open soon ...</h3>}
     </>
   );
 };
