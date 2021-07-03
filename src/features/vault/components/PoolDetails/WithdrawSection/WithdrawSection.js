@@ -298,19 +298,19 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
           .then(() => {
             enqueueSnackbar(t('Vault-WithdrawSuccess'), { variant: 'success' });
             fetchBalances({ address, web3, tokens });
-          })
-          .catch(error =>
-            enqueueSnackbar(t('Vault-WithdrawError', { error }), { variant: 'error' })
-          );
+          }).catch (error => {})
+          // .catch(error =>
+          //   enqueueSnackbar(t('Vault-WithdrawError', { error }), { variant: 'error' })
+          // );
       } else {
         fetchWithdrawBnb(vaultWithdrawArgs)
           .then(() => {
             enqueueSnackbar(t('Vault-WithdrawSuccess'), { variant: 'success' });
             fetchBalances({ address, web3, tokens });
-          })
-          .catch(error =>
-            enqueueSnackbar(t('Vault-WithdrawError', { error }), { variant: 'error' })
-          );
+          }).catch (error => {})
+          // .catch(error =>
+          //   enqueueSnackbar(t('Vault-WithdrawError', { error }), { variant: 'error' })
+          // );
       }
     }
   };

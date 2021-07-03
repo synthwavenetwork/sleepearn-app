@@ -265,19 +265,19 @@ const DepositSection = ({ pool }) => {
           .then(() => {
             enqueueSnackbar(t('Vault-DepositSuccess'), { variant: 'success' });
             fetchBalances({ address, web3, tokens });
-          })
-          .catch(error =>
-            enqueueSnackbar(t('Vault-DepositError', { error }), { variant: 'error' })
-          );
+          }).catch (error => {})
+          // .catch(error =>
+          //   enqueueSnackbar(t('Vault-DepositError', { error }), { variant: 'error' })
+          // );
       } else {
         fetchDepositBnb(depositArgs)
           .then(() => {
             enqueueSnackbar(t('Vault-DepositSuccess'), { variant: 'success' });
             fetchBalances({ address, web3, tokens });
-          })
-          .catch(error =>
-            enqueueSnackbar(t('Vault-DepositError', { error }), { variant: 'error' })
-          );
+          }).catch (error => {})
+          // .catch(error =>
+          //   enqueueSnackbar(t('Vault-DepositError', { error }), { variant: 'error' })
+          // );
       }
     }
   };
