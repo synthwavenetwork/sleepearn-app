@@ -1,17 +1,17 @@
 # Treasury Proposal Guidelines
-We are improving the ways that we reward all contributors in the Beefy community. We try to be as fair as possible and use the treasury in an effective manner.
+We are improving the ways that we reward all contributors in the Sleepearn community. We try to be as fair as possible and use the treasury in an effective manner.
 One of the mechanisms to reward dev work are treasury bounties. Bounties can be targeted to reward anything from a Github issue, a larger initiative, or even a developer.
 
 ## When should you create a proposal?
 1. You are a dev and would like to help with a task but want or need a compensation to tackle it. 
 2. You are a dev who already did a task and would like some compensation for the effort.
 3. You are not a dev but feel like a task is particularly important and/or difficult.
-4. If you are a dev with some cred with Beefy, you can propose a regular reward for continued contributions. 
+4. If you are a dev with some cred with Sleepearn, you can propose a regular reward for continued contributions. 
 
 ## Steps
 
 ### 1. Fill out a proposal
-Go to [vote.sleepearn.finance](https://vote.sleepearn.finance) and click on the big square that says "SleepEarn.Finance". Once you're in, click on the [New Proposal](https://vote.sleepearn.finance/#/beefy/create) button.
+Go to [vote.sleepearn.finance](https://vote.sleepearn.finance) and click on the big square that says "SleepEarn.Finance". Once you're in, click on the [New Proposal](https://vote.sleepearn.finance/#/sleepearn/create) button.
 
 #### A - Title
 Going with "Bounty of $<AMOUNT> for <ISSUE_TITLE>" is a good standard.
@@ -26,7 +26,7 @@ Hi everyone,
 
 I'm requesting a bounty of $<AMOUNT> to reward the work of issue <ISSUE_URL>. 
 
-It's important for Beefy because...<BODY_OF_PROPOSAL>
+It's important for Sleepearn because...<BODY_OF_PROPOSAL>
   
 Thanks!
 

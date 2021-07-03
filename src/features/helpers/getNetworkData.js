@@ -49,6 +49,8 @@ export const getNetworkTokens = () => {
 
 export const getNetworkBurnTokens = () => {
   switch (process.env.REACT_APP_NETWORK_ID) {
+    case '0':
+      return {};
     case '56':
       return {
         [bscAddressBook.tokens.GARUDA.symbol]: bscAddressBook.tokens.GARUDA,

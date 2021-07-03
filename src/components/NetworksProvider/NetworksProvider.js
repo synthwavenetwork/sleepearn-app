@@ -9,6 +9,12 @@ const NetworksProvider = ({ children }) => {
 
   const networks = [
     {
+      name: 'KardiaChain',
+      asset: 'KAI',
+      id: '0',
+      url: 'https://app.sleepearn.finance',
+    },
+    {
       name: 'BSC',
       asset: 'BNB',
       id: '56',
