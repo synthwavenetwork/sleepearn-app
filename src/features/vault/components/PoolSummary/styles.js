@@ -42,6 +42,7 @@ const styles = theme => ({
     },
   },
   itemBalances: {
+    marginTop: '12px',
     [theme.breakpoints.up('sm')]: {
       flexBasis: '25%',
       maxWidth: '25%',
