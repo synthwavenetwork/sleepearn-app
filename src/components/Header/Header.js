@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,17 +9,17 @@ import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import Menu from '@material-ui/icons/Menu';
 import Close from '@material-ui/icons/Close';
-import WbSunny from '@material-ui/icons/WbSunny';
-import NightsStay from '@material-ui/icons/NightsStay';
-import { getNetworkBuyLink } from '../../features/helpers/getNetworkData';
+// import WbSunny from '@material-ui/icons/WbSunny';
+// import NightsStay from '@material-ui/icons/NightsStay';
+// import { getNetworkBuyLink } from '../../features/helpers/getNetworkData';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
 
-const Header = ({ links, isNightMode, setNightMode }) => {
+const Header = ({ links }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const classes = useStyles();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -91,7 +91,7 @@ const Header = ({ links, isNightMode, setNightMode }) => {
             <Close />
           </IconButton>
           <div className={classes.appResponsive}>{links}</div>
-          <div style={{ textAlign: 'center' }}>
+          {/* <div style={{ textAlign: 'center' }}>
             <LinkSidebar name="vote" label="vote" icon="vote-yea" classes={classes} />
             <LinkSidebar name="dashboard" label={t('stats')} icon="chart-bar" classes={classes} />
             <LinkSidebar name="docs" label="docs" icon="book" classes={classes} />
@@ -99,27 +99,27 @@ const Header = ({ links, isNightMode, setNightMode }) => {
             <IconButton onClick={setNightMode} className={classes.icon}>
               {isNightMode ? <WbSunny /> : <NightsStay />}
             </IconButton>
-          </div>
+          </div> */}
         </Drawer>
       </Hidden>
     </AppBar>
   );
 };
 
-const renderLink = (name, label, icon, classes) => {
-  return (
-    <a
-      href={getLinkUrl(name)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={classes.link}
-      style={{ marginLeft: '5px', marginRight: '5px' }}
-    >
-      <i className={`fas fa-${icon} ${classes.icon}`} />
-      <span>{label}</span>
-    </a>
-  );
-};
+// const renderLink = (name, label, icon, classes) => {
+//   return (
+//     <a
+//       href={getLinkUrl(name)}
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       className={classes.link}
+//       style={{ marginLeft: '5px', marginRight: '5px' }}
+//     >
+//       <i className={`fas fa-${icon} ${classes.icon}`} />
+//       <span>{label}</span>
+//     </a>
+//   );
+// };
 
 // const renderBoost = classes => {
 //   return (
@@ -129,12 +129,12 @@ const renderLink = (name, label, icon, classes) => {
 //   );
 // };
 
-const LinkSidebar = ({ name, label, icon, classes }) => (
-  <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes)}</div>
-);
+// const LinkSidebar = ({ name, label, icon, classes }) => (
+//   <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes)}</div>
+// );
 
-const getLinkUrl = name => {
-  return name === 'buy' ? getNetworkBuyLink() : `https://${name}.sleepearn.finance`;
-};
+// const getLinkUrl = name => {
+//   return name === 'buy' ? getNetworkBuyLink() : `https://${name}.sleepearn.finance`;
+// };
 
 export default Header;

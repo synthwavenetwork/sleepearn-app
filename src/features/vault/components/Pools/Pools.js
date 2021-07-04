@@ -55,11 +55,11 @@ export default function Pools() {
 
   return (
     <Grid container className={classes.container}>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <h1 className={classes.title}>Earning and Auto Compounding while you are sleeping.</h1>
         {/* <NetworksToggle /> */}
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <div className={classes.tvl}>
           <span className={classes.title}>
             TVL{' '}
