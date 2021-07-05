@@ -44,6 +44,7 @@ const Pool = ({
         TransitionProps={{ unmountOnExit: true }}
       >
         <PoolSummary
+          expanded={isOpen}
           pool={pool}
           launchpool={launchpool}
           balanceSingle={balanceSingle}

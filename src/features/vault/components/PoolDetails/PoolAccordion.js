@@ -23,7 +23,13 @@ const PoolAccordion = ({ pool, balanceSingle, index, sharesBalance }) => {
 
   if (connected) {
     return (
-      <AccordionDetails style={{ justifyContent: 'space-between' }}>
+      <AccordionDetails style={{
+        justifyContent: 'space-between',
+        background: '#ffffff',
+        borderBottomLeftRadius: '8px',
+        borderBottomRightRadius: '8px',
+        marginTop: '-1px'
+      }}>
         <PoolActions pool={pool} balanceSingle={balanceSingle} sharesBalance={sharesBalance} />
       </AccordionDetails>
     );

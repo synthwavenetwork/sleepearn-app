@@ -24,6 +24,7 @@ const PoolSummary = ({
   fetchBalancesDone,
   fetchApysDone,
   fetchVaultsDataDone,
+  expanded
 }) => {
   const { t } = useTranslation();
   const classes = useStyles();
@@ -82,7 +83,7 @@ const PoolSummary = ({
           ? classes.detailsPaused
           : classes.details
       }
-      style={{ justifyContent: 'space-between', borderRadius: 8 }}
+      style={{ justifyContent: 'space-between', borderRadius: expanded ? '8px 8px 0 0' : '8px' }}
       onClick={onSummaryClick}
     >
       <Grid container alignItems="center" style={{ paddingTop: '20px' }}>
