@@ -2,7 +2,7 @@ const styles = theme => ({
   details: {
     display: 'flex',
     alignItems: 'center',
-    background: '#e0933599',
+    background: '#f7b25ee6',
   },
   detailsPaused: {
     display: 'flex',

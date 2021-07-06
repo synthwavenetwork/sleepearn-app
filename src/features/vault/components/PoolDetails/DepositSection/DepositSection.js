@@ -202,7 +202,8 @@ const DepositSection = ({ pool }) => {
       tokenSymbol: depositSettings.token.symbol,
     })
       .then(() => enqueueSnackbar(t('Vault-ApprovalSuccess'), { variant: 'success' }))
-      .catch(error => enqueueSnackbar(t('Vault-ApprovalError', { error }), { variant: 'error' }));
+      .catch (error => {})
+      // catch(error => enqueueSnackbar(t('Vault-ApprovalError', { error }), { variant: 'error' }));
   };
 
   const handleDepositAll = () => {
