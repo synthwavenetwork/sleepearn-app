@@ -1,20 +1,18 @@
 import { vaultABI } from '../configure';
 import { enqueueSnackbar } from '../common/redux/actions';
-import { fetchGasPrice } from './../web3/fetchGasPrice'
 
 export const withdraw = async ({ web3, address, isAll, amount, contractAddress, dispatch }) => {
   const contract = new web3.eth.Contract(vaultABI, contractAddress);
-  const gasPrice = await fetchGasPrice()
-  const data = await _withdraw({ web3, contract, isAll, amount, address, dispatch, gasPrice });
+  const data = await _withdraw({ web3, contract, isAll, amount, address, dispatch });
   return data;
 };
 
-const _withdraw = ({ web3, contract, address, isAll, amount, dispatch, gasPrice }) => {
+const _withdraw = ({ web3, contract, address, isAll, amount, dispatch }) => {
   return new Promise((resolve, reject) => {
     if (isAll) {
       contract.methods
         .withdrawAll()
-        .send({ from: address, gasPrice: gasPrice })
+        .send({ from: address})
         .on('transactionHash', function (hash) {
           dispatch(
             enqueueSnackbar({
@@ -42,7 +40,7 @@ const _withdraw = ({ web3, contract, address, isAll, amount, dispatch, gasPrice 
     } else {
       contract.methods
         .withdraw(amount)
-        .send({ from: address, gasPrice: gasPrice })
+        .send({ from: address })
         .on('transactionHash', function (hash) {
           console.log(hash);
           dispatch(
