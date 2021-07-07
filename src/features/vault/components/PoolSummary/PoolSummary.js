@@ -99,6 +99,7 @@ const PoolSummary = ({
             removeLiquidityUrl={pool.removeLiquidityUrl}
             buyTokenUrl={pool.buyTokenUrl}
             assets={pool.assets}
+            tokenDescriptionUrl={pool.tokenDescriptionUrl}
           />
         </Grid>
         <Grid item xs={6} className={`${classes.item} ${classes.itemBalances}`}>

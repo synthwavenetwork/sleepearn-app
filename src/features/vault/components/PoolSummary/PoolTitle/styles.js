@@ -31,12 +31,15 @@ const styles = theme => ({
     color: theme.palette.text.primary,
     marginLeft: '4px',
     'flex-shrink': 0,
-    width: '45px',
-    height: '45px',
+    width: '50px',
+    height: '50px',
     '& .MuiAvatarGroup-avatar': {
       border: 'none',
       width: '65%',
       height: '65%',
+      background: '#ffffff',
+      borderRadius: '50%',
+      padding: '1px',
       '&:first-child': {
         position: 'absolute',
         top: 0,
