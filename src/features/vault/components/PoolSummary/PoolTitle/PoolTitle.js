@@ -31,6 +31,7 @@ const PoolTitle = ({
   buyTokenUrl,
   addLiquidityUrl,
   removeLiquidityUrl,
+  tokenDescriptionUrl,
   assets,
 }) => {
   const classes = useStyles();
@@ -76,11 +77,21 @@ const PoolTitle = ({
               {name}
             </a>
           ) : (
-            name
-          )}
+              name
+            )}
         </Typography>
         <Typography className={classes.subtitle} variant="body2">
-          {description}
+          {
+            tokenDescriptionUrl && tokenDescriptionUrl !== '#' ? (
+              <a href={tokenDescriptionUrl} 
+              className={classes.subtitle} 
+              rel="noopener noreferrer"
+              target="_blank">
+                {description}
+              </a>
+            ) : description
+          }
+
         </Typography>
         <div style={{ display: 'flex', marginTop: '6px' }}>
           {buyTokenUrl ? (
@@ -89,8 +100,8 @@ const PoolTitle = ({
               {'\u00A0\u00A0'}
             </a>
           ) : (
-            ''
-          )}
+              ''
+            )}
           {addLiquidityUrl ? (
             <a
               className={classes.url}
@@ -101,8 +112,8 @@ const PoolTitle = ({
               <span>{t('Add-Liquidity')}</span>
             </a>
           ) : (
-            ''
-          )}
+              ''
+            )}
           {removeLiquidityUrl ? (
             <a
               className={classes.url}
@@ -113,8 +124,8 @@ const PoolTitle = ({
               <span>{t('Remove-Liquidity')}</span>
             </a>
           ) : (
-            ''
-          )}
+              ''
+            )}
         </div>
         {launchpool ? (
           <a className={classes.btnBoost} href={'/stake/pool/' + launchpool.id}>
@@ -124,8 +135,8 @@ const PoolTitle = ({
             </span>
           </a>
         ) : (
-          ''
-        )}
+            ''
+          )}
       </div>
     </Grid>
   );
