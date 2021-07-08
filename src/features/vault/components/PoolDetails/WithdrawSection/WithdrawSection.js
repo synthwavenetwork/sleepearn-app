@@ -328,7 +328,7 @@ const WithdrawSection = ({ pool, index, sharesBalance }) => {
           {byDecimals(
             sharesBalance.multipliedBy(new BigNumber(pool.pricePerFullShare)),
             pool.tokenDecimals
-          ).toFormat(8)}{' '}
+          ).toFormat(18)}{' '}
           {pool.token}
         </div>
       </div>
