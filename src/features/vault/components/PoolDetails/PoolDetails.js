@@ -26,7 +26,7 @@ const FETCH_INTERVAL_MS = 30 * 1000;
 const useStyles = makeStyles(styles);
 
 const formatDecimals = number => {
-  return number >= 10 ? number.toFixed(4) : number.isEqualTo(0) ? 0 : number.toFixed(8);
+  return number >= 10 ? number.toFixed(4) : number.isEqualTo(0) ? 0 : number.toFixed(18);
 };
 
 const PoolDetails = ({ vaultId }) => {

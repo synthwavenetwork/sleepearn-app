@@ -330,7 +330,7 @@ const DepositSection = ({ pool }) => {
         {t('Vault-Balance')}:{' '}
         <div onClick={handleMax} className={classes.balanceMax}>
           {tokenBalance(depositSettings.token.symbol)
-            .decimalPlaces(8, BigNumber.ROUND_DOWN)
+            .decimalPlaces(18, BigNumber.ROUND_DOWN)
             .toFormat()}{' '}
           {depositSettings.token.symbol}
         </div>
