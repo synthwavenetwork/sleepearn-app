@@ -4,7 +4,7 @@ const styles = theme => ({
     margin: '8px 0 2rem',
     // border: '1px solid ' + theme.palette.background.border,
     // backgroundColor: theme.palette.background.primary,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#fbefbef2',
     justifyContent: 'space-between',
     position: 'relative',
     borderRadius: '8px'
