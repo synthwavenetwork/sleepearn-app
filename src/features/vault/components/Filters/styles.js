@@ -4,7 +4,7 @@ const styles = theme => ({
     margin: '8px 0 2rem',
     // border: '1px solid ' + theme.palette.background.border,
     // backgroundColor: theme.palette.background.primary,
-    backgroundColor: '#c77d237a',
+    backgroundColor: '#ffffff',
     justifyContent: 'space-between',
     position: 'relative',
     borderRadius: '8px'
@@ -40,16 +40,20 @@ const styles = theme => ({
     },
   },
   reset: {
-    border: '1px solid ' + theme.palette.background.border,
+    // border: '1px solid ' + theme.palette.background.border,
     padding: '4px 8px',
     position: 'absolute',
     top: '5px',
     right: '5px',
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: "#b05703",
     '& .MuiButton-label': {
       fontWeight: 'bold',
       textTransform: 'capitalize',
+      color: "#ffffff"
     },
+    '&:hover': {
+      backgroundColor: 'rgb(243 183 111)'
+    }
   },
 });
 

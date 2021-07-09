@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './styles';
 
@@ -13,7 +13,7 @@ import useSortedPools from '../../hooks/useSortedPools';
 import useVisiblePools from '../../hooks/useVisiblePools';
 
 import Pool from '../Pool/Pool';
-// import Filters from '../Filters/Filters';
+import Filters from '../Filters/Filters';
 import { useFetchPoolData } from '../../../stake/redux/fetchPoolData';
 
 const useStyles = makeStyles(styles);
@@ -27,13 +27,13 @@ const VisiblePools = ({
   fetchVaultsDataDone,
 }) => {
   const classes = useStyles();
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
-  const { filteredPools } = useFilteredPools(pools, tokens);
-  const { poolsByPlatform } = usePoolsByPlatform(filteredPools);
-  const { poolsByVaultType } = usePoolsByVaultType(poolsByPlatform);
-  const { poolsByAsset } = usePoolsByAsset(poolsByVaultType);
-  const { sortedPools } = useSortedPools(poolsByAsset, apys, tokens);
+  const { filteredPools, toggleFilter, filters } = useFilteredPools(pools, tokens);
+  const { poolsByPlatform, platform, setPlatform } = usePoolsByPlatform(filteredPools);
+  const { poolsByVaultType, vaultType, setVaultType } = usePoolsByVaultType(poolsByPlatform);
+  const { poolsByAsset, asset, setAsset } = usePoolsByAsset(poolsByVaultType);
+  const { sortedPools, order, setOrder } = useSortedPools(poolsByAsset, apys, tokens);
   const { visiblePools, fetchVisiblePools } = useVisiblePools(sortedPools, 10);
   const { pools: stake, fetchPoolData } = useFetchPoolData();
   const indexes = [];
@@ -63,7 +63,7 @@ const VisiblePools = ({
 
   return (
     <>
-      {/* <Filters
+      <Filters
         toggleFilter={toggleFilter}
         filters={filters}
         platform={platform}
@@ -74,7 +74,7 @@ const VisiblePools = ({
         setVaultType={setVaultType}
         setAsset={setAsset}
         setOrder={setOrder}
-      /> */}
+      />
       <div className={classes.scroller}>
         <InfiniteScroll dataLength={visiblePools.length} hasMore={true} next={fetchVisiblePools}>
           {visiblePools.map((pool, index) => (
@@ -91,8 +91,7 @@ const VisiblePools = ({
           ))}
         </InfiniteScroll>
       </div>
-      {/* {!sortedPools.length && <h3 className={classes.subtitle}>{t('No-Results')}</h3>} */}
-      {!sortedPools.length && <h3 className={classes.subtitle}>Stay tuned, vaults will open soon ...</h3>}
+      {!sortedPools.length && <h3 className={classes.subtitle}>{t('No-Results')}</h3>}
     </>
   );
 };

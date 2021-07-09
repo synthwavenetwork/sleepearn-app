@@ -10,7 +10,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import InputLabel from '@material-ui/core/InputLabel';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Avatar, Box, Button } from '@material-ui/core';
+// import { Avatar, Box, Button } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 import styles from './styles';
 import { platforms, assets } from './constants';
@@ -58,7 +59,7 @@ const Filters = ({
 
   return (
     <Grid container spacing={2} className={classes.container}>
-      <Grid item xs={6} sm={4} md={3}>
+      <Grid item xs={6} sm={6}>
         <Button className={classes.reset} onClick={resetFilter}>
           {t('Filters-Reset')}
         </Button>
@@ -78,7 +79,7 @@ const Filters = ({
         </FormControl>
       </Grid>
 
-      <Grid item xs={6} sm={4} md={3}>
+      {/* <Grid item xs={6} sm={4} md={3}>
         <FormControl>
           <FormControlLabel
             className={classes.label}
@@ -93,9 +94,9 @@ const Filters = ({
             label={t('Retired-Vaults')}
           />
         </FormControl>
-      </Grid>
+      </Grid> */}
 
-      <Grid item xs={6} sm={4} md={3}>
+      <Grid item xs={6} sm={6}>
         <FormControl>
           <FormControlLabel
             className={classes.label}
@@ -112,7 +113,7 @@ const Filters = ({
         </FormControl>
       </Grid>
 
-      <Grid item xs={6} sm={4} md={3}>
+      {/* <Grid item xs={6} sm={4} md={3}>
         <FormControl>
           <FormControlLabel
             className={classes.label}
@@ -131,7 +132,7 @@ const Filters = ({
             }
           />
         </FormControl>
-      </Grid>
+      </Grid> */}
 
       <Grid item xs={6} sm={4} md={3}>
         <FormControl className={classes.selectorContainer}>
@@ -175,12 +176,12 @@ const Filters = ({
             <MenuItem key={'Singles'} value={'Singles'}>
               {t('Single Assets')}
             </MenuItem>
-            <MenuItem key={'StableLPs'} value={'StableLPs'}>
+            {/* <MenuItem key={'StableLPs'} value={'StableLPs'}>
               {t('Stable LPs')}
             </MenuItem>
             <MenuItem key={'Stables'} value={'Stables'}>
               {t('Stables')}
-            </MenuItem>
+            </MenuItem> */}
           </Select>
         </FormControl>
       </Grid>
