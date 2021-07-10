@@ -33,6 +33,7 @@ const PoolTitle = ({
   removeLiquidityUrl,
   tokenDescriptionUrl,
   assets,
+  wrapTokenUrl
 }) => {
   const classes = useStyles();
   const { t } = useTranslation();
@@ -122,6 +123,18 @@ const PoolTitle = ({
               rel="noopener noreferrer"
             >
               <span>{t('Remove-Liquidity')}</span>
+            </a>
+          ) : (
+              ''
+            )}
+            {wrapTokenUrl ? (
+            <a
+              className={classes.url}
+              href={wrapTokenUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>{t('Wrap-Token')}</span>
             </a>
           ) : (
               ''
