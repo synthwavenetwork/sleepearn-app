@@ -12,7 +12,8 @@ import {
   polygonStakePools,
   polygonZaps,
   kardiaPools,
-  kardiaTokens
+  kardiaTokens,
+  kardiaZaps
 } from '../configure';
 
 const networkTxUrls = {
@@ -73,6 +74,8 @@ export const getNetworkBurnTokens = () => {
 
 export const getNetworkZaps = () => {
   switch (process.env.REACT_APP_NETWORK_ID) {
+    case '0':
+      return kardiaZaps;
     case '56':
       return bscZaps;
     case '128':

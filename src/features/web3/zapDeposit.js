@@ -1,4 +1,4 @@
-import { beefyUniV2ZapABI } from '../configure';
+import { sleepearnKaiDexZapABI } from '../configure';
 import { enqueueSnackbar } from '../common/redux/actions';
 
 export const zapDeposit = async ({
@@ -12,7 +12,7 @@ export const zapDeposit = async ({
   swapAmountOutMin,
   dispatch,
 }) => {
-  const contract = new web3.eth.Contract(beefyUniV2ZapABI, zapAddress);
+  const contract = new web3.eth.Contract(sleepearnKaiDexZapABI, zapAddress);
   const data = await _zapDeposit({
     contract,
     address,
@@ -39,21 +39,21 @@ const _zapDeposit = ({
   let transaction;
 
   if (isETH) {
-    console.log('beefInETH(vaultAddress, swapAmountOutMin)', vaultAddress, swapAmountOutMin);
-    transaction = contract.methods.beefInETH(vaultAddress, swapAmountOutMin).send({
+    console.log('sleepearnInKAI(vaultAddress, swapAmountOutMin)', vaultAddress, swapAmountOutMin);
+    transaction = contract.methods.sleepearnInKAI(vaultAddress, swapAmountOutMin).send({
       from: address,
       value: tokenAmount,
     });
   } else {
     console.log(
-      'beefIn(vaultAddress, swapAmountOutMin, tokenAddress, tokenAmount)',
+      'sleepearnIn(vaultAddress, swapAmountOutMin, tokenAddress, tokenAmount)',
       vaultAddress,
       swapAmountOutMin,
       tokenAddress,
       tokenAmount
     );
     transaction = contract.methods
-      .beefIn(vaultAddress, swapAmountOutMin, tokenAddress, tokenAmount)
+      .sleepearnIn(vaultAddress, swapAmountOutMin, tokenAddress, tokenAmount)
       .send({
         from: address,
       });

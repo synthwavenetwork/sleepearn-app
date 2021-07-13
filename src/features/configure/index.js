@@ -16,9 +16,9 @@ export {
   strategyABI,
   multicallABI,
   govPoolABI,
-  beefyUniV2ZapABI,
   uniswapV2PairABI,
-  uniswapV2RouterABI,
+  kaidexRouterABI,
+  sleepearnKaiDexZapABI
 } from './abi';
 export { bscStakePools } from './stake/bsc_stake';
 export { hecoStakePools } from './stake/heco_stake';
@@ -27,6 +27,7 @@ export { polygonStakePools } from './stake/polygon_stake';
 export { fantomStakePools } from './stake/fantom_stake';
 export { bscPools } from './vault/bsc_pools';
 export { bscZaps } from './zap/bsc_zaps';
+export { kardiaZaps } from './zap/kardia_zaps';
 export { hecoZaps } from './zap/heco_zaps';
 export { avalancheZaps } from './zap/avalanche_zaps';
 export { polygonZaps } from './zap/polygon_zaps';
