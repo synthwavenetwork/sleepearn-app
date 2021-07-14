@@ -1,4 +1,4 @@
-import { beefyUniV2ZapABI } from '../configure';
+import { sleepearnKaiDexZapABI } from '../configure';
 import { enqueueSnackbar } from '../common/redux/actions';
 
 export const zapWithdraw = async ({
@@ -9,10 +9,9 @@ export const zapWithdraw = async ({
   zapAddress,
   dispatch,
 }) => {
-  console.log('beefOut(vaultAddress, amount)', vaultAddress, amount);
-
-  const contract = new web3.eth.Contract(beefyUniV2ZapABI, zapAddress);
-  const transaction = contract.methods.beefOut(vaultAddress, amount).send({
+  console.log('sleepearnOut(vaultAddress, amount)', vaultAddress, amount);
+  const contract = new web3.eth.Contract(sleepearnKaiDexZapABI, zapAddress);
+  const transaction = contract.methods.sleepearnOut(vaultAddress, amount).send({
     from: address,
   });
 
@@ -30,16 +29,16 @@ export const zapWithdrawAndSwap = async ({
   dispatch,
 }) => {
   console.log(
-    'beefOutAndSwap(vaultAddress, amount, tokenOut, amountOutMin)',
+    'sleepearnOutAndSwap(vaultAddress, amount, tokenOut, amountOutMin)',
     vaultAddress,
     amount,
     tokenOut,
     amountOutMin
   );
 
-  const contract = new web3.eth.Contract(beefyUniV2ZapABI, zapAddress);
+  const contract = new web3.eth.Contract(sleepearnKaiDexZapABI, zapAddress);
   const transaction = contract.methods
-    .beefOutAndSwap(vaultAddress, amount, tokenOut, amountOutMin)
+    .sleepearnOutAndSwap(vaultAddress, amount, tokenOut, amountOutMin)
     .send({
       from: address,
     });

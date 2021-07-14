@@ -178,7 +178,7 @@ export default function StakePools(props) {
         <Grid className={classes.faq} item xs={12} lg={9}>
           <Accordion square expanded={expanded === 'faq-1'} onChange={handleChange('faq-1')}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>How do I use Beefy Launchpool?</Typography>
+              <Typography>How do I use SleepEarn Launchpool?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -189,7 +189,7 @@ export default function StakePools(props) {
                 />
                 Look for a boosted partner Vault in our main app and stake the tokens that are asked
                 for in the vault. You will get a “receipt” called mooToken in your wallet. Proceed
-                to the related partner Launchpool vault here on the Beefy Launchpool site and enter
+                to the related partner Launchpool vault here on the SleepEarn Launchpool site and enter
                 the corresponding vault (or press the shortcut on the main vault page called Boost).
                 The vault will ask for you to stake yourmooToken “receipts''. Stake these mooTokens
                 and you are all done, you can easily come back here and follow your earned partner
@@ -281,11 +281,11 @@ export default function StakePools(props) {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                mooBifi is the token you receive from depositing $BIFI into the Beefy Maxi vault.
+                mooBifi is the token you receive from depositing $BIFI into the SleepEarn Maxi vault.
                 These mooTokens do not 1:1 represent the token amount initially deposited but it
-                does represent the value of your share in the vault. The Beefy Maxi vault gathers a
-                performance fee from every Beefy Vault when they are harvested, and uses it to buy
-                more $BIFI and redeposit in the vault. The more profit the Beefy generates, the more
+                does represent the value of your share in the vault. The SleepEarn Maxi vault gathers a
+                performance fee from every SleepEarn Vault when they are harvested, and uses it to buy
+                more $BIFI and redeposit in the vault. The more profit the SleepEarn generates, the more
                 $BIFI you'll own in the vault. Do NOT sell your mooTokens, or else you lose access
                 to your deposit.
               </Typography>
@@ -297,9 +297,9 @@ export default function StakePools(props) {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Yes! These partner vaults are hosted by Beefy and are completely safe. Beefy has
+                Yes! These partner vaults are hosted by SleepEarn and are completely safe. SleepEarn has
                 gotten tokens from our partners and uses our own vaults for the reward. Those
-                mooTokens your stake doesn’t leave Beefy.
+                mooTokens your stake doesn’t leave SleepEarn.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -327,9 +327,9 @@ export default function StakePools(props) {
             <AccordionDetails>
               <Typography>
                 That’s because APR and APY show two different things. APR means “Annual Percentage
-                Rate” and is a fixed rate. Beefy shows APR by dividing the annual yield into 365
+                Rate” and is a fixed rate. SleepEarn shows APR by dividing the annual yield into 365
                 days and presents that to you as “Daily”. APY on the other hand means “Annual
-                percentage yield” which is when you take the daily yield and compound it. Beefy
+                percentage yield” which is when you take the daily yield and compound it. SleepEarn
                 compounds your rewards automatically most of the time multiple times a day, this
                 makes the APY much higher than a yearly APR would be.
               </Typography>
@@ -357,12 +357,12 @@ export default function StakePools(props) {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                When partnering with a certain project, Beefy always tries to make an overall check
+                When partnering with a certain project, SleepEarn always tries to make an overall check
                 of the project to get a sense of its sincerity and safety. Before adding vaults that
                 are hosted by the partnering project, we also try to look for vulnerabilities in the
                 code. Despite all this, we can never be 100% sure about a partner, hence it’s up to
                 you to make sure that the partnering project is a project that you want to support.
-                Beefy cannot, and will not take any responsibility for your personal actions.
+                SleepEarn cannot, and will not take any responsibility for your personal actions.
               </Typography>
             </AccordionDetails>
           </Accordion>
