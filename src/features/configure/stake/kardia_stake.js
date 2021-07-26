@@ -13,7 +13,7 @@ export const kardiaStakePools = [
         earnedToken: 'KAI',
         earnedTokenDecimals: 18,
         earnedTokenAddress: '0xAF984E23EAA3E7967F3C5E007fbe397D8566D23d',
-        earnContractAddress: '0x3e5Cc7C628edCD25660Ad5A78fcF8020159e8df7',
+        earnContractAddress: '0x4F193C46120b046Fe934De0F4E83bB4AA19907da',
         earnContractAbi: govPoolABI,
         earnedOracle: 'tokens',
         earnedOracleId: 'WKAI',
