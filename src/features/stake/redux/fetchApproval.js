@@ -60,19 +60,19 @@ export function fetchApproval(index) {
           dispatch(checkApproval(index));
           resolve();
         })
-        .on('error', function (error) {
-          dispatch(
-            enqueueSnackbar({
-              message: error.message || error,
-              options: {
-                key: new Date().getTime() + Math.random(),
-                variant: 'error',
-              },
-            })
-          );
-          dispatch({ type: STAKE_FETCH_APPROVAL_FAILURE, index });
-          resolve();
-        })
+        // .on('error', function (error) {
+        //   dispatch(
+        //     enqueueSnackbar({
+        //       message: error.message || error,
+        //       options: {
+        //         key: new Date().getTime() + Math.random(),
+        //         variant: 'error',
+        //       },
+        //     })
+        //   );
+        //   dispatch({ type: STAKE_FETCH_APPROVAL_FAILURE, index });
+        //   resolve();
+        // })
         .catch(error => {
           dispatch({ type: STAKE_FETCH_APPROVAL_FAILURE, index });
           reject(error);

@@ -57,19 +57,19 @@ export function fetchWithdraw(index, amount) {
           dispatch({ type: STAKE_FETCH_WITHDRAW_SUCCESS, index });
           resolve();
         })
-        .on('error', function (error) {
-          dispatch(
-            enqueueSnackbar({
-              message: error.message || error,
-              options: {
-                key: new Date().getTime() + Math.random(),
-                variant: 'error',
-              },
-            })
-          );
-          dispatch({ type: STAKE_FETCH_WITHDRAW_FAILURE, index });
-          resolve();
-        })
+        // .on('error', function (error) {
+        //   dispatch(
+        //     enqueueSnackbar({
+        //       message: error.message || error,
+        //       options: {
+        //         key: new Date().getTime() + Math.random(),
+        //         variant: 'error',
+        //       },
+        //     })
+        //   );
+        //   dispatch({ type: STAKE_FETCH_WITHDRAW_FAILURE, index });
+        //   resolve();
+        // })
         .catch(error => {
           dispatch({ type: STAKE_FETCH_WITHDRAW_FAILURE, index });
           reject(error);

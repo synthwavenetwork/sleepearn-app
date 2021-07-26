@@ -227,11 +227,13 @@ const styles = theme => ({
     display: 'inline-flex',
     margin: '0 1rem',
     fontSize: '1rem',
-    fontWeight: 400,
     color: '#000',
     textDecoration: 'none',
-    '&:hover': {
-      textDecoration: 'underline',
+    cursor: "pointer",
+    fontWeight: 600,
+    '& span:hover': {
+      // textDecoration: 'underline',
+      color: "#f7d37e"
     },
     '& span': {
       color: theme.palette.text.primary,
