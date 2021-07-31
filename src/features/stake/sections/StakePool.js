@@ -22,18 +22,18 @@ import {
   Box,
   Dialog,
   Grid,
-  Link,
+  // Link,
   makeStyles,
   TextField,
   Typography,
 } from '@material-ui/core';
 
-import TwitterIcon from '@material-ui/icons/Twitter';
-import TelegramIcon from '@material-ui/icons/Telegram';
+// import TwitterIcon from '@material-ui/icons/Twitter';
+// import TelegramIcon from '@material-ui/icons/Telegram';
 
 import Button from '../../../components/CustomButtons/Button';
 import { styles } from './styles/view';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 import { formatApy, formatCountdown } from '../../helpers/format';
 import { Helmet } from 'react-helmet';
 // import { getNetworkFriendlyName } from '../../helpers/getNetworkData';
@@ -243,15 +243,15 @@ export default function StakePool(props) {
       : 0;
   };
 
-  const customBgImg = img => {
-    return img
-      ? {
-          backgroundImage: 'url(' + require('images/' + img) + ')',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }
-      : {};
-  };
+  // const customBgImg = img => {
+  //   return img
+  //     ? {
+  //         backgroundImage: 'url(' + require('images/' + img) + ')',
+  //         backgroundSize: 'cover',
+  //         backgroundRepeat: 'no-repeat',
+  //       }
+  //     : {};
+  // };
 
   return (
     <Grid container>
@@ -321,7 +321,7 @@ export default function StakePool(props) {
         <Grid item xs={6} sm={6} md={3}>
           <Box display="flex" justifyContent={'center'}>
             <Typography className={classes.title}>{`${
-              Math.floor(myRewardsAvailable.toNumber() * 10000) / 10000
+              Math.floor(myRewardsAvailable.toNumber() * 10000000) / 10000000
             } ${pools[index].earnedToken}`}</Typography>
             <Avatar className={classes.fire} src={require('images/stake/fire.png')} />
           </Box>
@@ -435,7 +435,7 @@ export default function StakePool(props) {
         </Grid>
       </Grid>
 
-      {pools[index].partners.map(partner => (
+      {/* {pools[index].partners.map(partner => (
         <Grid container className={classes.row} style={customBgImg(partner.background)}>
           <Grid item xs={12} className={classes.partnerHeader}>
             {partner.logo ? (
@@ -474,7 +474,7 @@ export default function StakePool(props) {
             )}
           </Grid>
         </Grid>
-      ))}
+      ))} */}
 
       <Dialog
         onClose={() => {

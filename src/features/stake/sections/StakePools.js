@@ -7,14 +7,14 @@ import {
   Avatar,
   makeStyles,
   Box,
-  Accordion,
-  AccordionDetails,
+  // Accordion,
+  // AccordionDetails,
 } from '@material-ui/core';
-import Disclaimer from 'components/Disclaimer/Disclaimer';
+// import Disclaimer from 'components/Disclaimer/Disclaimer';
 import Button from 'components/CustomButtons/Button';
 import styles from './styles/list';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import AccordionSummary from '@material-ui/core/AccordionSummary';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useConnectWallet } from 'features/home/redux/hooks';
 import { formatCountdown } from 'features/helpers/format';
 import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
@@ -25,7 +25,8 @@ export default function StakePools(props) {
   const classes = useStyles();
   const { t } = useTranslation();
   const { pools } = useFetchPoolData();
-  const { networkId, address } = useConnectWallet();
+  // const { networkId, address } = useConnectWallet();
+  const { address } = useConnectWallet();
   const { halfTime, fetchHalfTime } = useFetchHalfTime();
   const [time, setTime] = React.useState(new Date());
 
@@ -46,11 +47,11 @@ export default function StakePools(props) {
     return () => clearInterval(id);
   }, [address, halfTime, fetchHalfTime, pools]);
 
-  const [expanded, setExpanded] = React.useState('faq-1');
+  // const [expanded, setExpanded] = React.useState('faq-1');
 
-  const handleChange = panel => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+  // const handleChange = panel => (event, newExpanded) => {
+  //   setExpanded(newExpanded ? panel : false);
+  // };
 
   useEffect(() => {
     const fetchCountdown = () => {
@@ -95,11 +96,11 @@ export default function StakePools(props) {
 
   return (
     <Grid container>
-      <Grid item xs={12}>
+      {/* <Grid item xs={12}>
         <div className={classes.launchpool}>
           <img alt="Launchpool" src={require('images/stake/launchpool.png')} />
         </div>
-      </Grid>
+      </Grid> */}
       <Grid item xs={12} style={{ paddingBottom: '20px', textAlign: 'right' }}>
         <ToggleButtonGroup value={showPools} exclusive onChange={handleShowPools}>
           <ToggleButton value="all">All</ToggleButton>
@@ -174,7 +175,7 @@ export default function StakePools(props) {
           </React.Fragment>
         ))}
       </Grid>
-      <Grid container spacing={4} justify={'center'}>
+      {/* <Grid container spacing={4} justify={'center'}>
         <Grid className={classes.faq} item xs={12} lg={9}>
           <Accordion square expanded={expanded === 'faq-1'} onChange={handleChange('faq-1')}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -385,7 +386,7 @@ export default function StakePools(props) {
         <Grid item xs={12}>
           <Disclaimer />
         </Grid>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 }

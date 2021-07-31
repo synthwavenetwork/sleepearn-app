@@ -11,7 +11,7 @@ import Menu from '@material-ui/icons/Menu';
 import Close from '@material-ui/icons/Close';
 // import WbSunny from '@material-ui/icons/WbSunny';
 // import NightsStay from '@material-ui/icons/NightsStay';
-// import { getNetworkBuyLink } from '../../features/helpers/getNetworkData';
+import { getNetworkBuyLink } from '../../features/helpers/getNetworkData';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
@@ -49,11 +49,12 @@ const Header = ({ links }) => {
         </Button>
 
         <div className={classes.middleNav}>
-          {/* <Hidden smDown>
-            {renderLink('vote', 'vote', 'vote-yea', classes)}
-            {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
-            {renderLink('docs', 'docs', 'book', classes)}
-          </Hidden> */}
+          <Hidden smDown>
+            {renderLink('', 'Vaults', '', classes)}
+            {renderLink('stake', 'Staking', '', classes)}
+            {/* {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
+            {renderLink('docs', 'docs', 'book', classes)} */}
+          </Hidden>
           {/* {renderLink('buy', t('buy'), 'dollar-sign', classes)} */}
           {/* {renderBoost(classes)} */}
         </div>
@@ -91,35 +92,35 @@ const Header = ({ links }) => {
             <Close />
           </IconButton>
           <div className={classes.appResponsive}>{links}</div>
-          {/* <div style={{ textAlign: 'center' }}>
-            <LinkSidebar name="vote" label="vote" icon="vote-yea" classes={classes} />
-            <LinkSidebar name="dashboard" label={t('stats')} icon="chart-bar" classes={classes} />
-            <LinkSidebar name="docs" label="docs" icon="book" classes={classes} />
-            <LinkSidebar name="buy" label={t('buy')} icon="dollar-sign" classes={classes} />
-            <IconButton onClick={setNightMode} className={classes.icon}>
+          <div style={{ textAlign: 'center' }}>
+            <LinkSidebar name="" label="Vaults" icon="" classes={classes} />
+            <LinkSidebar name="stake" label="Staking" icon="" classes={classes} />
+            {/* <LinkSidebar name="docs" label="docs" icon="book" classes={classes} />
+            <LinkSidebar name="buy" label={t('buy')} icon="dollar-sign" classes={classes} /> */}
+            {/* <IconButton onClick={setNightMode} className={classes.icon}>
               {isNightMode ? <WbSunny /> : <NightsStay />}
-            </IconButton>
-          </div> */}
+            </IconButton> */}
+          </div>
         </Drawer>
       </Hidden>
     </AppBar>
   );
 };
 
-// const renderLink = (name, label, icon, classes) => {
-//   return (
-//     <a
-//       href={getLinkUrl(name)}
-//       target="_blank"
-//       rel="noopener noreferrer"
-//       className={classes.link}
-//       style={{ marginLeft: '5px', marginRight: '5px' }}
-//     >
-//       <i className={`fas fa-${icon} ${classes.icon}`} />
-//       <span>{label}</span>
-//     </a>
-//   );
-// };
+const renderLink = (name, label, icon, classes) => {
+
+  return (
+    <a
+      href={getLinkUrl(name)}
+      rel="noopener noreferrer"
+      className={classes.link}
+      style={{ marginLeft: '5px', marginRight: '5px' }}
+    >
+      <i className={`fas fa-${icon} ${classes.icon}`} />
+      <span>{label}</span>
+    </a>
+  );
+};
 
 // const renderBoost = classes => {
 //   return (
@@ -129,12 +130,12 @@ const Header = ({ links }) => {
 //   );
 // };
 
-// const LinkSidebar = ({ name, label, icon, classes }) => (
-//   <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes)}</div>
-// );
+const LinkSidebar = ({ name, label, icon, classes }) => (
+  <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes)}</div>
+);
 
-// const getLinkUrl = name => {
-//   return name === 'buy' ? getNetworkBuyLink() : `https://${name}.sleepearn.finance`;
-// };
+const getLinkUrl = name => {
+  return name === 'buy' ? getNetworkBuyLink() : `/${name}`;
+};
 
 export default Header;

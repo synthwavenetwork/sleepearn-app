@@ -25,6 +25,7 @@ export { hecoStakePools } from './stake/heco_stake';
 export { avalancheStakePools } from './stake/avalanche_stake';
 export { polygonStakePools } from './stake/polygon_stake';
 export { fantomStakePools } from './stake/fantom_stake';
+export { kardiaStakePools } from './stake/kardia_stake'
 export { bscPools } from './vault/bsc_pools';
 export { bscZaps } from './zap/bsc_zaps';
 export { kardiaZaps } from './zap/kardia_zaps';

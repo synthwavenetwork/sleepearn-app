@@ -33,6 +33,11 @@ const styles = theme => ({
     'flex-shrink': 0,
     width: '50px',
     height: '50px',
+    '&.SingleAvatar-root': {
+      background: '#ffffff',
+      borderRadius: '50%',
+      padding: '1px',
+    },
     '& .MuiAvatarGroup-avatar': {
       border: 'none',
       width: '65%',

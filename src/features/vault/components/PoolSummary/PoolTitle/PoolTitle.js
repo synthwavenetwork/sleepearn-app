@@ -44,7 +44,7 @@ const PoolTitle = ({
       <Avatar
         alt={logo}
         variant="square"
-        className={classes.icon}
+        className={`${classes.icon} SingleAvatar-root`}
         imgProps={{ style: { objectFit: 'contain' } }}
         src={require(`images/${logo}`)}
       />
