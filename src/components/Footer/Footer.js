@@ -34,7 +34,7 @@ const Footer = () => {
           <span>{t('source')}</span>
         </a>
         <a
-          href="https://kaisnapshot.com/#/sen.eth"
+          href="https://kaisnapshot.com/#/sen.kai"
           target="_blank"
           rel="noopener noreferrer"
           className={classes.link}
