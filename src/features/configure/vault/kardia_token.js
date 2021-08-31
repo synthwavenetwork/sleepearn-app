@@ -65,5 +65,13 @@ export const kardiaTokens = {
         chainId: 0,
         decimals: 18,
         logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/D675fF2B0ff139E14F86D87b7a6049ca7C66d76e.png",
+    },
+    KABA: {
+        name: "Kripto Galaxy Battle",
+        symbol: "KABA",
+        address: "0x5C5058de24497359Ff64F7318f5C2b5581FF6B05",
+        chainId: 0,
+        decimals: 18,
+        logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/0x5C5058de24497359Ff64F7318f5C2b5581FF6B05.png",
     }
 }
