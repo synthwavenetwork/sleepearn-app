@@ -22,18 +22,18 @@ import {
   Box,
   Dialog,
   Grid,
-  // Link,
+  Link,
   makeStyles,
   TextField,
   Typography,
 } from '@material-ui/core';
 
-// import TwitterIcon from '@material-ui/icons/Twitter';
-// import TelegramIcon from '@material-ui/icons/Telegram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import TelegramIcon from '@material-ui/icons/Telegram';
 
 import Button from '../../../components/CustomButtons/Button';
 import { styles } from './styles/view';
-// import Divider from '@material-ui/core/Divider';
+import Divider from '@material-ui/core/Divider';
 import { formatApy, formatCountdown } from '../../helpers/format';
 import { Helmet } from 'react-helmet';
 // import { getNetworkFriendlyName } from '../../helpers/getNetworkData';
@@ -243,15 +243,15 @@ export default function StakePool(props) {
       : 0;
   };
 
-  // const customBgImg = img => {
-  //   return img
-  //     ? {
-  //         backgroundImage: 'url(' + require('images/' + img) + ')',
-  //         backgroundSize: 'cover',
-  //         backgroundRepeat: 'no-repeat',
-  //       }
-  //     : {};
-  // };
+  const customBgImg = img => {
+    return img
+      ? {
+          backgroundImage: 'url(' + require('images/' + img) + ')',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }
+      : {};
+  };
 
   return (
     <Grid container>
@@ -348,10 +348,14 @@ export default function StakePool(props) {
           <Typography className={classes.title}>{getPoolShare()}%</Typography>
           <Typography className={classes.subtitle}>{t('Stake-Your-Pool')}%</Typography>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <Typography className={classes.title}>{formatApy(poolData[index].apy)}</Typography>
-          <Typography className={classes.subtitle}>{t('Vault-APR')}</Typography>
-        </Grid>
+        {
+          pools[index].earnedTokenType !== "nft" ? (
+            <Grid item xs={12} sm={4}>
+              <Typography className={classes.title}>{formatApy(poolData[index].apy)}</Typography>
+              <Typography className={classes.subtitle}>{t('Vault-APR')}</Typography>
+            </Grid>
+          ) : <></>
+        }
 
         {pools[index].status === 'closed' || pools[index].status === 'soon' ? (
           <Box className={classes.ribbon}>
@@ -435,7 +439,7 @@ export default function StakePool(props) {
         </Grid>
       </Grid>
 
-      {/* {pools[index].partners.map(partner => (
+      {pools[index].partners && pools[index].partners.length > 0 && pools[index].partners.map(partner => (
         <Grid container className={classes.row} style={customBgImg(partner.background)}>
           <Grid item xs={12} className={classes.partnerHeader}>
             {partner.logo ? (
@@ -474,7 +478,7 @@ export default function StakePool(props) {
             )}
           </Grid>
         </Grid>
-      ))} */}
+      ))}
 
       <Dialog
         onClose={() => {

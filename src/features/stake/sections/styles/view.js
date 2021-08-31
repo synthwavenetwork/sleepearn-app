@@ -42,7 +42,7 @@ const styles = theme => ({
   },
 
   retired: {
-    background: theme.palette.type === 'dark' ? '#614141' : '#d2c5c9',
+    background: theme.palette.type === 'dark' ? '#614141' : '#ffffff',
   },
 
   title: {
