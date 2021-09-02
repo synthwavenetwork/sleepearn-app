@@ -51,8 +51,8 @@ export const kardiaStakePools = [
         earnedOracle: 'tokens',
         earnedOracleId: 'BLK',
         partnership: false,
-        status: 'soon',
-        hideCountdown: true,
+        status: 'active',
+        hideCountdown: false,
         // periodFinish: 1630324800,
         partners: [
             {
@@ -85,8 +85,8 @@ export const kardiaStakePools = [
         earnedOracle: 'tokens',
         earnedOracleId: 'BLK',
         partnership: false,
-        status: 'soon',
-        hideCountdown: true,
+        status: 'active',
+        hideCountdown: false,
         // periodFinish: 1635552000,
         partners: [
             {
