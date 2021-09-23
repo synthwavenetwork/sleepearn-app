@@ -33,6 +33,15 @@ const Footer = () => {
           <i className={`fab fa-github ${classes.linkIcon}`}></i>
           <span>{t('source')}</span>
         </a>
+        <a
+          href="https://kaisnapshot.com/#/sen.kai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.link}
+        >
+          <i className={`fas fa-vote-yea ${classes.linkIcon}`}></i>
+          <span>vote</span>
+        </a>
       </div>
       <div className={classes.column}>
         <div className={classes.title}>{t('socials')}</div>
