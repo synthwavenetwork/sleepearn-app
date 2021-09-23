@@ -73,5 +73,21 @@ export const kardiaTokens = {
         chainId: 0,
         decimals: 18,
         logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/0x5C5058de24497359Ff64F7318f5C2b5581FF6B05.png",
+    },
+    KPHI: {
+        name: "Kephi Gallery Token",
+        symbol: "KPHI",
+        address: "0x6CD689DefCA80f9F2CBED9D0C6f3B2Cf4abc4598",
+        chainId: 0,
+        decimals: 18,
+        logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/0x6CD689DefCA80f9F2CBED9D0C6f3B2Cf4abc4598.png",
+    },
+    LPDI: {
+        name: "Token Lucky Property Development Invest Token",
+        symbol: "LPDI",
+        address: "0x32a6bD9800276be19050bd97459A7a36B26bD899",
+        chainId: 0,
+        decimals: 18,
+        logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/0x32a6bD9800276be19050bd97459A7a36B26bD899.png",
     }
 }
