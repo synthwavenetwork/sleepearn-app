@@ -89,5 +89,13 @@ export const kardiaTokens = {
         chainId: 0,
         decimals: 18,
         logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/0x32a6bD9800276be19050bd97459A7a36B26bD899.png",
+    },
+    USDT: {
+        name: "Tether USD",
+        symbol: "USDT",
+        address: "0x551A5dcAC57C66aA010940c2dcFf5DA9c53aa53b",
+        chainId: 0,
+        decimals: 6,
+        logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/0x551A5dcAC57C66aA010940c2dcFf5DA9c53aa53b.png",
     }
 }
