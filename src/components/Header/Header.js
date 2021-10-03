@@ -52,6 +52,7 @@ const Header = ({ links }) => {
           <Hidden smDown>
             {renderLink('', 'Vaults', '', classes)}
             {renderLink('stake', 'Staking', '', classes)}
+            {renderLink('claimable', 'Claimable', '', classes)}
             {/* {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
             {renderLink('docs', 'docs', 'book', classes)} */}
           </Hidden>
