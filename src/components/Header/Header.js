@@ -52,7 +52,7 @@ const Header = ({ links }) => {
           <Hidden smDown>
             {renderLink('', 'Vaults', '', classes)}
             {renderLink('stake', 'Staking', '', classes)}
-            {renderLink('claimable', 'Claimable', '', classes)}
+            {renderLink('https://claim.sleepearn.finance', 'Claimable', '', classes, true)}
             {/* {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
             {renderLink('docs', 'docs', 'book', classes)} */}
           </Hidden>
@@ -108,8 +108,21 @@ const Header = ({ links }) => {
   );
 };
 
-const renderLink = (name, label, icon, classes) => {
-
+const renderLink = (name, label, icon, classes, external) => {
+  if (external) {
+    return (
+      <a
+        href={name}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.link}
+        style={{ marginLeft: '5px', marginRight: '5px' }}
+      >
+        <i className={`fas fa-${icon} ${classes.icon}`} />
+        <span>{label}</span>
+      </a>
+    )
+  }
   return (
     <a
       href={getLinkUrl(name)}
