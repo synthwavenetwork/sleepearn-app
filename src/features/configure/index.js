@@ -36,4 +36,3 @@ export { fantomZaps } from './zap/fantom_zaps';
 export { nativeCoins } from './native_coins';
 export { kardiaPools } from './vault/kardia_pools';
 export { kardiaTokens } from './vault/kardia_token';
-export { kardiaClaimablePools } from './claimable/kardia_claimable'
