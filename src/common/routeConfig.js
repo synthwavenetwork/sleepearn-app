@@ -2,11 +2,10 @@ import { App } from '../features/home';
 import homeRoute from '../features/home/route';
 import stakeRoute from '../features/stake/route';
 import vaultRoute from '../features/vault/route';
-import claimableRoute from '../features/claimable/route';
 
 // NOTE: DO NOT CHANGE the 'childRoutes' name and the declaration pattern.
 // This is used for Rekit cmds to register routes config for new features, and remove config when remove features, etc.
-const childRoutes = [homeRoute, stakeRoute, vaultRoute, claimableRoute];
+const childRoutes = [homeRoute, stakeRoute, vaultRoute];
 
 const routes = [
   {
