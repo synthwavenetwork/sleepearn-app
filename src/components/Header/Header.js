@@ -96,6 +96,7 @@ const Header = ({ links }) => {
           <div style={{ textAlign: 'center' }}>
             <LinkSidebar name="" label="Vaults" icon="" classes={classes} />
             <LinkSidebar name="stake" label="Staking" icon="" classes={classes} />
+            <LinkSidebar name="https://claim.sleepearn.finance" label="Claimable" icon="" classes={classes} external={true} />
             {/* <LinkSidebar name="docs" label="docs" icon="book" classes={classes} />
             <LinkSidebar name="buy" label={t('buy')} icon="dollar-sign" classes={classes} /> */}
             {/* <IconButton onClick={setNightMode} className={classes.icon}>
@@ -113,7 +114,6 @@ const renderLink = (name, label, icon, classes, external) => {
     return (
       <a
         href={name}
-        target="_blank"
         rel="noopener noreferrer"
         className={classes.link}
         style={{ marginLeft: '5px', marginRight: '5px' }}
@@ -144,8 +144,8 @@ const renderLink = (name, label, icon, classes, external) => {
 //   );
 // };
 
-const LinkSidebar = ({ name, label, icon, classes }) => (
-  <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes)}</div>
+const LinkSidebar = ({ name, label, icon, classes, external }) => (
+  <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes, external)}</div>
 );
 
 const getLinkUrl = name => {
