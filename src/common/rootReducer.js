@@ -16,7 +16,7 @@ const reducerMap = {
   home: homeReducer,
   vault: vaultReducer,
   stake: stakeReducer,
-  common: commonReducer,
+  common: commonReducer
 };
 
 export default combineReducers(reducerMap);

@@ -14,6 +14,7 @@ const PAGE_META = {
   'App-Meta-Description': () => SLEEPEARN_TITLE,
   'Stakes-Meta-Title': () => SLEEPEARN_TITLE,
   'Stake-Meta-Title': () => SLEEPEARN_TITLE,
+  'Claimable-Vault-Meta-Title': () => SLEEPEARN_TITLE,
 };
 
 function getPageMeta(t, key, data = {}) {

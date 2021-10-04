@@ -52,6 +52,7 @@ const Header = ({ links }) => {
           <Hidden smDown>
             {renderLink('', 'Vaults', '', classes)}
             {renderLink('stake', 'Staking', '', classes)}
+            {renderLink('https://claim.sleepearn.finance', 'Claimable', '', classes, true)}
             {/* {renderLink('dashboard', t('stats'), 'chart-bar', classes)}
             {renderLink('docs', 'docs', 'book', classes)} */}
           </Hidden>
@@ -95,6 +96,7 @@ const Header = ({ links }) => {
           <div style={{ textAlign: 'center' }}>
             <LinkSidebar name="" label="Vaults" icon="" classes={classes} />
             <LinkSidebar name="stake" label="Staking" icon="" classes={classes} />
+            <LinkSidebar name="https://claim.sleepearn.finance" label="Claimable" icon="" classes={classes} external={true} />
             {/* <LinkSidebar name="docs" label="docs" icon="book" classes={classes} />
             <LinkSidebar name="buy" label={t('buy')} icon="dollar-sign" classes={classes} /> */}
             {/* <IconButton onClick={setNightMode} className={classes.icon}>
@@ -107,8 +109,20 @@ const Header = ({ links }) => {
   );
 };
 
-const renderLink = (name, label, icon, classes) => {
-
+const renderLink = (name, label, icon, classes, external) => {
+  if (external) {
+    return (
+      <a
+        href={name}
+        rel="noopener noreferrer"
+        className={classes.link}
+        style={{ marginLeft: '5px', marginRight: '5px' }}
+      >
+        <i className={`fas fa-${icon} ${classes.icon}`} />
+        <span>{label}</span>
+      </a>
+    )
+  }
   return (
     <a
       href={getLinkUrl(name)}
@@ -130,8 +144,8 @@ const renderLink = (name, label, icon, classes) => {
 //   );
 // };
 
-const LinkSidebar = ({ name, label, icon, classes }) => (
-  <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes)}</div>
+const LinkSidebar = ({ name, label, icon, classes, external }) => (
+  <div style={{ width: '100%', paddingTop: '10px' }}>{renderLink(name, label, icon, classes, external)}</div>
 );
 
 const getLinkUrl = name => {
