@@ -105,5 +105,13 @@ export const kardiaTokens = {
         chainId: 0,
         decimals: 18,
         logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/F0051fd4758147F1749D1696C9266d047B4c43Fa.png",
+    },
+    FAM: {
+        name: "FAM Token",
+        symbol: "FAM",
+        address: "0x7664e4bF5611352088dc3a58e4bCe2C92BADf43C",
+        chainId: 0,
+        decimals: 18,
+        logoURI:"https://kardiachain-explorer.s3-ap-southeast-1.amazonaws.com/explorer.kardiachain.io/logo/7664e4bF5611352088dc3a58e4bCe2C92BADf43C.png",
     }
 }
