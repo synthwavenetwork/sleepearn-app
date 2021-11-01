@@ -161,7 +161,7 @@ export const kardiaPools = [
       pricePerFullShare: 1,
       tvl: 0,
       oracle: 'lps',
-      oracleId: 'beco_amm-beco-kai',
+      oracleId: 'beco_amm-kaba-kai',
       oraclePrice: 0,
       depositsPaused: false,
       status: 'active',
